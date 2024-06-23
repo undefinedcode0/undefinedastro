@@ -18,6 +18,12 @@
 	animation: glow 1.5s infinite alternate;
 }
 
+.js-icon {
+	color: rgb(249, 226, 175);
+	text-shadow: 0 0 5px rgba(249, 226, 175, 0.5), 0 0 10px rgba(249, 226, 1751, 0.4), 0 0 15px rgba(249, 226, 175, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
 .astro-icon {
 	color: rgb(205, 214, 244);
 	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
@@ -69,5 +75,17 @@
 .github-icon {
 	color: rgb(205, 214, 244);
 	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.git-icon {
+	color: rgb(205, 214, 244);
+	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.neovim-icon {
+	color: rgb(166, 227, 161);
+	text-shadow: 0 0 5px rgba(166, 227, 161, 0.5), 0 0 10px rgba(166, 227, 161, 0.4), 0 0 15px rgba(166, 227, 161, 0.3);
 	animation: glow 1.5s infinite alternate;
 }
