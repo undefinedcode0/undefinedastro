@@ -1,0 +1,47 @@
+---
+import "../styles/app.css";
+import "../styles/icons.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <title>undefinedcode</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="main-nav">
+        <li class="glow-no_anim"><a href="/">undefined</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#friends">Friends</a></li>
+        <li><a href="#servers">Servers</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+      <ul class="social-nav">
+        <li>
+          <a href="https://github.com/undefinedcode0" class="glow-no_anim"
+            >GitHub</a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/channel/UCmMYkdnhCKMODPm3MFlj3_w"
+            class="glow-no_anim">YouTube</a>
+        </li>
+        <li>
+          <a href="https://x.com/undefinedcode0" class="glow-no_anim"
+            >Twitter</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>Made with <span class="heart">&#10084;</span> by undefinedcode.</p>
+    </footer>
+  </body>
+</html>

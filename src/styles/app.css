@@ -1,0 +1,175 @@
+body {
+	font-family: 'Google Sans', system-ui, sans-serif;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	position: relative;
+}
+
+body::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: inherit; /* inherit the background image */
+	filter: blur(10px); /* adjust the blur radius as needed */
+	z-index: -2; /* behind the content */
+}
+
+body::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.5) 70%);
+	z-index: -1; /* behind the content but above the blurred background */
+}
+
+nav {
+	background-color: #1f0e06;
+	padding: 10px;
+	width: 100%;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between; /* Distribute space between main nav and social nav */
+	align-items: center;
+	position: sticky; /* Make the nav bar sticky */
+	top: 0; /* Stick the nav bar to the top */
+	z-index: 1000; /* Ensure the nav bar stays on top of other content */
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul.main-nav {
+	justify-content: flex-start; /* Align main nav links to the left */
+}
+
+nav ul.social-nav {
+	justify-content: flex-end; /* Align social nav links to the right */
+}
+
+nav ul li {
+	margin: 0 15px;
+}
+
+nav ul li a {
+	color: #f9ef9b;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+hr {
+	border: 0;
+	height: 4px; /* Thickness of the line */
+	border-radius: 19px; /* Rounded corners */
+	background: #705649;
+	margin: 20px 0; /* Space above and below the line */
+}
+
+.content-cell {
+	background-color: #1f0e06; /* Dark background for sections */
+	border-radius: 1.75rem;
+	padding: 1rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	width: 90%;
+	max-width: 600px;
+	margin-bottom: 1rem;
+	color: #fff;
+}
+
+.outer-cell {
+	background-color: #241007; /* Dark background for sections */
+	border-radius: 1.75rem;
+	text-align: center;
+	padding: 1rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	width: 94.75%;
+	max-width: 600px;
+	margin-bottom: 1rem;
+	color: #fff;
+}
+
+.skills-container {
+	display: flex;
+	gap: 20px; /* Adjust the gap between the items as needed */
+	justify-content: center; /* Center the items horizontally */
+	align-items: center; /* Center the items vertically */
+}
+
+footer {
+	background-color: #1f0e06;
+	color: #f9ef9b;
+	text-align: center;
+	padding: 10px;
+	width: 100%;
+	box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer .heart {
+	text-shadow: 0 0 5px rgba(249, 239, 155, 0.5);
+	animation: glow 1.5s infinite alternate;
+}
+
+.header-set {
+	padding: 0;
+	margin: 0;
+
+	text-align: center;
+}
+
+.glow {
+	color: #f9ef9b;
+	text-shadow: 0 0 17px rgba(249, 239, 155, 0.5);
+	animation: glow 1.5s infinite alternate;
+}
+
+.glow-no_anim {
+	color: #f9ef9b;
+	text-shadow: 0 0 17px rgb(249, 239, 155);
+}
+
+.glow ul,
+.glow li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.glow li:before {
+	content: "><";
+	margin-right: 7px;
+	color: #f9ef9b; /* Neon yellow */
+	text-shadow: 0 0 5px #f9ef9b, 0 0 7px #f9ef9b, 0 0 12px #f9ef9b, 0 0 17px #f9ef9b, 0 0 22px #f9ef9b, 0 0 27px #f9ef9b, 0 0 34px #f9ef9b;
+}
+
+/* Responsive design for small screens */
+@media(max-width: 600px) {
+	nav ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	nav ul.main-nav {
+		margin-bottom: 10px;
+	}
+}

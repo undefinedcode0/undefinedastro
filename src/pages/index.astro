@@ -1,0 +1,128 @@
+---
+import Layout from "../components/Layout.astro";
+---
+
+<Layout>
+  <section class="content-cell">
+    <h2>Introduction:</h2>
+    <p>
+      Hey, buddy. My name is <span class="glow">undefinedcode</span>. Nice to
+      meet you.
+    </p>
+  </section>
+
+  <section id="about" class="content-cell">
+    <h2>About Me:</h2>
+    <p>
+      Me? Just a person who likes computers and programming. I'm pretty chill
+      and active on Discord. You can find me at
+      <a href="https://discord.com/users/924466450578690079" class="glow"
+        >@undefinedcode</a
+      >.
+    </p>
+  </section>
+
+  <section id="friends" class="content-cell">
+    <h2>Friends:</h2>
+    <ul class="glow">
+      <li>who_is_vee -- <i>Vee</i></li>
+      <li>alocalbrit. -- <i>☩[ alxcalbrxt. ]☩ (brit)</i></li>
+      <li>wtf.cynn</li>
+      <li>pixiesstickss -- <i>jay</i></li>
+      <li>w0rm.t -- <i>sal</i></li>
+    </ul>
+  </section>
+
+  <section id="servers" class="content-cell">
+    <h2>Servers:</h2>
+    <ul class="glow">
+      <li>Murder Drones Basement</li>
+      <li>H Gang Community</li>
+      <li>MalwarePad's Network</li>
+      <li>OpenXP</li>
+      <li>bullshit🤑🙏 - "hail brit!"</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="content-cell">
+    <h2>Skills:</h2>
+    <section class="outer-cell">
+      <h2>Languages</h2>
+      <div class="skills-container">
+        <i class="c-icon">C</i>
+        <i class="cpp-icon">C++</i>
+        <i class="csharp-icon">C#</i>
+        <i class="html5-icon">HTML5</i>
+        <i class="css-icon">CSS</i>
+      </div>
+      <hr />
+      <h2>Frameworks</h2>
+      <div class="skills-container">
+        <i class="astro-icon">Astro</i>
+        <i class="svelte-icon">Svelte</i>
+        <i class="nodejs-icon">NodeJS</i>
+      </div>
+      <hr />
+      <h2>Tools</h2>
+      <div class="skills-container">
+        <i class="shell-icon">Shell</i>
+        <i class="zsh-icon">zsh</i>
+        <i class="linux-icon">Linux</i>
+        <i class="github-icon">GitHub</i>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const backgrounds: string[] = [
+          "assets/backgrounds/back1.png",
+          "assets/backgrounds/back2.png",
+          "assets/backgrounds/back3.png",
+          "assets/backgrounds/back4.png",
+          "assets/backgrounds/back5.png",
+          "assets/backgrounds/back6.png",
+          "assets/backgrounds/back7.png",
+          "assets/backgrounds/back8.png",
+          "assets/backgrounds/back9.png",
+          "assets/backgrounds/back10.png",
+          "assets/backgrounds/back11.png",
+          "assets/backgrounds/back12.png",
+          "assets/backgrounds/back13.png",
+          "assets/backgrounds/back14.png",
+          "assets/backgrounds/back15.png",
+          "assets/backgrounds/back16.png",
+          "assets/backgrounds/back17.png",
+          "assets/backgrounds/back18.png",
+          "assets/backgrounds/back19.png",
+          "assets/backgrounds/freak1.jpg"
+        ];
+
+        function preloadImages(images: string[]) {
+          images.forEach((image: string) => {
+            const img = new Image();
+            img.src = image;
+          });
+        }
+
+        function getRandomBackground(exclude: string): string {
+          let randomIndex: number;
+          do {
+            randomIndex = Math.floor(Math.random() * backgrounds.length);
+          } while (backgrounds[randomIndex] === exclude);
+          return backgrounds[randomIndex];
+        }
+
+        const lastBackground: string | null =
+          localStorage.getItem("lastBackground");
+        const selectedBackground: string = getRandomBackground(
+          lastBackground || ""
+        );
+
+        document.body.style.backgroundImage = `url(${selectedBackground})`;
+        localStorage.setItem("lastBackground", selectedBackground);
+
+        preloadImages(backgrounds);
+      });
+    </script>
+  </section>
+</Layout>

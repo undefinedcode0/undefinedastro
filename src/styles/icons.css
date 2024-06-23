@@ -1,0 +1,73 @@
+/* Languages and Frameworks */
+
+.c-icon {
+	color: rgb(137, 180, 250);
+	text-shadow: 0 0 5px rgba(137, 180, 250, 0.5), 0 0 10px rgba(137, 180, 250, 0.4), 0 0 15px rgba(137, 180, 250, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.cpp-icon {
+	color: rgb(137, 180, 250);
+	text-shadow: 0 0 5px rgba(137, 180, 250, 0.5), 0 0 10px rgba(137, 180, 250, 0.4), 0 0 15px rgba(137, 180, 250, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.csharp-icon {
+	color: rgb(166, 227, 161);
+	text-shadow: 0 0 5px rgba(166, 227, 161, 0.5), 0 0 10px rgba(166, 227, 161, 0.4), 0 0 15px rgba(166, 227, 161, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.astro-icon {
+	color: rgb(205, 214, 244);
+	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.svelte-icon {
+	color: rgb(250, 179, 135);
+	text-shadow: 0 0 5px rgba(250, 179, 135, 0.5), 0 0 10px rgba(250, 179, 135, 0.4), 0 0 15px rgba(250, 179, 135, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.zsh-icon {
+	color: rgb(205, 214, 244);
+	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.shell-icon {
+	color: rgb(205, 214, 244);
+	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.linux-icon {
+	color: rgb(205, 214, 244);
+	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.html5-icon {
+	color: rgb(250, 179, 135);
+	text-shadow: 0 0 5px rgba(250, 179, 135, 0.5), 0 0 10px rgba(250, 179, 135, 0.4), 0 0 15px rgba(250, 179, 135, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.css-icon {
+	color: rgb(137, 180, 250);
+	text-shadow: 0 0 5px rgba(137, 180, 250, 0.5), 0 0 10px rgba(137, 180, 250, 0.4), 0 0 15px rgba(137, 180, 250, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.nodejs-icon {
+	color: rgb(166, 227, 161);
+	text-shadow: 0 0 5px rgba(166, 227, 161, 0.5), 0 0 10px rgba(166, 227, 161, 0.4), 0 0 15px rgba(166, 227, 161, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
+
+.github-icon {
+	color: rgb(205, 214, 244);
+	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+	animation: glow 1.5s infinite alternate;
+}
