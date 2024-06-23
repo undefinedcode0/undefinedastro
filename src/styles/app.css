@@ -18,7 +18,7 @@ body::before {
 	right: 0;
 	bottom: 0;
 	background: inherit; /* inherit the background image */
-	filter: blur(10px); /* adjust the blur radius as needed */
+	filter: blur(10px);
 	z-index: -2; /* behind the content */
 }
 
@@ -158,7 +158,7 @@ footer .heart {
 .glow li:before {
 	content: "><";
 	margin-right: 7px;
-	color: #f9ef9b; /* Neon yellow */
+	color: #f9ef9b;
 	text-shadow: 0 0 5px #f9ef9b, 0 0 7px #f9ef9b, 0 0 12px #f9ef9b, 0 0 17px #f9ef9b, 0 0 22px #f9ef9b, 0 0 27px #f9ef9b, 0 0 34px #f9ef9b;
 }
 
