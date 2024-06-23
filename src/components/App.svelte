@@ -46,16 +46,10 @@
 
   @keyframes glow {
     from {
-      text-shadow:
-        0 0 5px rgba(249, 239, 155, 0.5),
-        0 0 12px rgba(249, 239, 155, 0.4),
-        0 0 15px rgba(249, 239, 155, 0.3);
+      text-shadow: 0 0 5px rgba(249, 239, 155, 0.5);
     }
     to {
-      text-shadow:
-        0 0 10px rgb(249, 239, 155),
-        0 0 20px rgb(249, 239, 155),
-        0 0 30px rgb(249, 239, 155);
+      text-shadow: 0 0 10px rgba(249, 239, 155, 0.7);
     }
   }
 </style>

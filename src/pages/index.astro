@@ -3,6 +3,7 @@ import Layout from "../components/Layout.astro";
 ---
 
 <Layout>
+  <!-- Introduction Section -->
   <section class="content-cell">
     <h2>Introduction:</h2>
     <p>
@@ -11,17 +12,17 @@ import Layout from "../components/Layout.astro";
     </p>
   </section>
 
+  <!-- About Me Section -->
   <section id="about" class="content-cell">
     <h2>About Me:</h2>
     <p>
       Me? Just a person who likes computers and programming. I'm pretty chill
       and active on Discord. You can find me at
-      <a href="https://discord.com/users/924466450578690079" class="glow"
-        >@undefinedcode</a
-      >.
+      <a href="https://discord.com/users/924466450578690079" class="glow">@undefinedcode</a>.
     </p>
   </section>
 
+  <!-- Friends Section -->
   <section id="friends" class="content-cell">
     <h2>Friends:</h2>
     <ul class="glow">
@@ -33,6 +34,7 @@ import Layout from "../components/Layout.astro";
     </ul>
   </section>
 
+  <!-- Servers Section -->
   <section id="servers" class="content-cell">
     <h2>Servers:</h2>
     <ul class="glow">
@@ -44,6 +46,7 @@ import Layout from "../components/Layout.astro";
     </ul>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills" class="content-cell">
     <h2>Skills:</h2>
     <section class="outer-cell">
@@ -74,58 +77,56 @@ import Layout from "../components/Layout.astro";
         <i class="git-icon">Git</i>
       </div>
     </section>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const backgrounds: string[] = [
-          "assets/backgrounds/back1.png",
-          "assets/backgrounds/back2.png",
-          "assets/backgrounds/back3.png",
-          "assets/backgrounds/back4.png",
-          "assets/backgrounds/back5.png",
-          "assets/backgrounds/back6.png",
-          "assets/backgrounds/back7.png",
-          "assets/backgrounds/back8.png",
-          "assets/backgrounds/back9.png",
-          "assets/backgrounds/back10.png",
-          "assets/backgrounds/back11.png",
-          "assets/backgrounds/back12.png",
-          "assets/backgrounds/back13.png",
-          "assets/backgrounds/back14.png",
-          "assets/backgrounds/back15.png",
-          "assets/backgrounds/back16.png",
-          "assets/backgrounds/back17.png",
-          "assets/backgrounds/back18.png",
-          "assets/backgrounds/back19.png",
-          "assets/backgrounds/freak1.jpg"
-        ];
-
-        function preloadImages(images: string[]) {
-          images.forEach((image: string) => {
-            const img = new Image();
-            img.src = image;
-          });
-        }
-
-        function getRandomBackground(exclude: string): string {
-          let randomIndex: number;
-          do {
-            randomIndex = Math.floor(Math.random() * backgrounds.length);
-          } while (backgrounds[randomIndex] === exclude);
-          return backgrounds[randomIndex];
-        }
-
-        const lastBackground: string | null =
-          localStorage.getItem("lastBackground");
-        const selectedBackground: string = getRandomBackground(
-          lastBackground || ""
-        );
-
-        document.body.style.backgroundImage = `url(${selectedBackground})`;
-        localStorage.setItem("lastBackground", selectedBackground);
-
-        preloadImages(backgrounds);
-      });
-    </script>
   </section>
+
+  <!-- JavaScript for Background Image Preloading and Random Selection -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const backgrounds: string[] = [
+        "assets/backgrounds/back1.png",
+        "assets/backgrounds/back2.png",
+        "assets/backgrounds/back3.png",
+        "assets/backgrounds/back4.png",
+        "assets/backgrounds/back5.png",
+        "assets/backgrounds/back6.png",
+        "assets/backgrounds/back7.png",
+        "assets/backgrounds/back8.png",
+        "assets/backgrounds/back9.png",
+        "assets/backgrounds/back10.png",
+        "assets/backgrounds/back11.png",
+        "assets/backgrounds/back12.png",
+        "assets/backgrounds/back13.png",
+        "assets/backgrounds/back14.png",
+        "assets/backgrounds/back15.png",
+        "assets/backgrounds/back16.png",
+        "assets/backgrounds/back17.png",
+        "assets/backgrounds/back18.png",
+        "assets/backgrounds/back19.png",
+        "assets/backgrounds/freak1.jpg"
+      ];
+
+      function preloadImages(images: string[]): void {
+        images.forEach((image: string) => {
+          const img = new Image();
+          img.src = image;
+        });
+      }
+
+      function getRandomBackground(exclude: string): string {
+        let randomIndex: number;
+        do {
+          randomIndex = Math.floor(Math.random() * backgrounds.length);
+        } while (backgrounds[randomIndex] === exclude);
+        return backgrounds[randomIndex];
+      }
+
+      const lastBackground: string | null = localStorage.getItem("lastBackground");
+      const selectedBackground: string = getRandomBackground(lastBackground || "");
+
+      document.body.style.backgroundImage = `url(${selectedBackground})`;
+      localStorage.setItem("lastBackground", selectedBackground);
+
+      preloadImages(backgrounds);
+    });
+  </script>
 </Layout>

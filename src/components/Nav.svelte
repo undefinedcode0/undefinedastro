@@ -5,7 +5,7 @@
 <nav>
   <ul>
     {#each links as { href, text }}
-      <li><a {href}>{text}</a></li>
+      <li><a href={href}>{text}</a></li>
     {/each}
   </ul>
 </nav>
@@ -40,6 +40,10 @@
     nav ul {
       flex-direction: column;
       align-items: center;
+    }
+
+    nav ul li {
+      margin: 10px 0;
     }
   }
 </style>

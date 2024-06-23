@@ -1,91 +1,126 @@
-/* Languages and Frameworks */
-
-.c-icon {
-	color: rgb(137, 180, 250);
-	text-shadow: 0 0 5px rgba(137, 180, 250, 0.5), 0 0 10px rgba(137, 180, 250, 0.4), 0 0 15px rgba(137, 180, 250, 0.3);
+/* Common Styles for Icons */
+.icon {
+	text-shadow: 0 0 5px rgba(var(--icon-color), 0.5),
+				 0 0 10px rgba(var(--icon-color), 0.4),
+				 0 0 15px rgba(var(--icon-color), 0.3);
 	animation: glow 1.5s infinite alternate;
-}
-
-.cpp-icon {
-	color: rgb(137, 180, 250);
-	text-shadow: 0 0 5px rgba(137, 180, 250, 0.5), 0 0 10px rgba(137, 180, 250, 0.4), 0 0 15px rgba(137, 180, 250, 0.3);
+  }
+  
+  /* C Icon */
+  .c-icon {
+	--icon-color: 137, 180, 250;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.csharp-icon {
-	color: rgb(166, 227, 161);
-	text-shadow: 0 0 5px rgba(166, 227, 161, 0.5), 0 0 10px rgba(166, 227, 161, 0.4), 0 0 15px rgba(166, 227, 161, 0.3);
+  }
+  
+  /* C++ Icon */
+  .cpp-icon {
+	--icon-color: 137, 180, 250;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.js-icon {
-	color: rgb(249, 226, 175);
-	text-shadow: 0 0 5px rgba(249, 226, 175, 0.5), 0 0 10px rgba(249, 226, 1751, 0.4), 0 0 15px rgba(249, 226, 175, 0.3);
+  }
+  
+  /* C# Icon */
+  .csharp-icon {
+	--icon-color: 166, 227, 161;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.astro-icon {
-	color: rgb(205, 214, 244);
-	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+  }
+  
+  /* JavaScript Icon */
+  .js-icon {
+	--icon-color: 249, 226, 175;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.svelte-icon {
-	color: rgb(250, 179, 135);
-	text-shadow: 0 0 5px rgba(250, 179, 135, 0.5), 0 0 10px rgba(250, 179, 135, 0.4), 0 0 15px rgba(250, 179, 135, 0.3);
+  }
+  
+  /* Astro Icon */
+  .astro-icon {
+	--icon-color: 205, 214, 244;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.zsh-icon {
-	color: rgb(205, 214, 244);
-	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+  }
+  
+  /* Svelte Icon */
+  .svelte-icon {
+	--icon-color: 250, 179, 135;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.shell-icon {
-	color: rgb(205, 214, 244);
-	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+  }
+  
+  /* Zsh Icon */
+  .zsh-icon {
+	--icon-color: 205, 214, 244;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.linux-icon {
-	color: rgb(205, 214, 244);
-	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+  }
+  
+  /* Shell Icon */
+  .shell-icon {
+	--icon-color: 205, 214, 244;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.html5-icon {
-	color: rgb(250, 179, 135);
-	text-shadow: 0 0 5px rgba(250, 179, 135, 0.5), 0 0 10px rgba(250, 179, 135, 0.4), 0 0 15px rgba(250, 179, 135, 0.3);
+  }
+  
+  /* Linux Icon */
+  .linux-icon {
+	--icon-color: 249, 226, 175;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.css-icon {
-	color: rgb(137, 180, 250);
-	text-shadow: 0 0 5px rgba(137, 180, 250, 0.5), 0 0 10px rgba(137, 180, 250, 0.4), 0 0 15px rgba(137, 180, 250, 0.3);
+  }
+  
+  /* HTML5 Icon */
+  .html5-icon {
+	--icon-color: 250, 179, 135;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.nodejs-icon {
-	color: rgb(166, 227, 161);
-	text-shadow: 0 0 5px rgba(166, 227, 161, 0.5), 0 0 10px rgba(166, 227, 161, 0.4), 0 0 15px rgba(166, 227, 161, 0.3);
+  }
+  
+  /* CSS Icon */
+  .css-icon {
+	--icon-color: 137, 180, 250;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.github-icon {
-	color: rgb(205, 214, 244);
-	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+  }
+  
+  /* NodeJS Icon */
+  .nodejs-icon {
+	--icon-color: 166, 227, 161;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.git-icon {
-	color: rgb(205, 214, 244);
-	text-shadow: 0 0 5px rgba(205, 214, 244, 0.5), 0 0 10px rgba(205, 214, 244, 0.4), 0 0 15px rgba(205, 214, 244, 0.3);
+  }
+  
+  /* GitHub Icon */
+  .github-icon {
+	--icon-color: 205, 214, 244;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
-
-.neovim-icon {
-	color: rgb(166, 227, 161);
-	text-shadow: 0 0 5px rgba(166, 227, 161, 0.5), 0 0 10px rgba(166, 227, 161, 0.4), 0 0 15px rgba(166, 227, 161, 0.3);
+  }
+  
+  /* Git Icon */
+  .git-icon {
+	--icon-color: 243, 139, 168;
+	color: rgb(var(--icon-color));
 	animation: glow 1.5s infinite alternate;
-}
+  }
+  
+  /* Neovim Icon */
+  .neovim-icon {
+	--icon-color: 166, 227, 161;
+	color: rgb(var(--icon-color));
+	animation: glow 1.5s infinite alternate;
+  }
+  
+  @keyframes glow {
+	from {
+	  text-shadow: 0 0 5px rgba(var(--icon-color), 0.5),
+				   0 0 10px rgba(var(--icon-color), 0.4),
+				   0 0 15px rgba(var(--icon-color), 0.3);
+	}
+	to {
+	  text-shadow: 0 0 10px rgba(var(--icon-color), 0.7),
+				   0 0 20px rgba(var(--icon-color), 0.6),
+				   0 0 30px rgba(var(--icon-color), 0.5);
+	}
+  }
+  
