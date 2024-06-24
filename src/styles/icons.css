@@ -48,13 +48,6 @@
 	animation: glow 1.5s infinite alternate;
   }
   
-  /* Zsh Icon */
-  .zsh-icon {
-	--icon-color: 205, 214, 244;
-	color: rgb(var(--icon-color));
-	animation: glow 1.5s infinite alternate;
-  }
-  
   /* Shell Icon */
   .shell-icon {
 	--icon-color: 205, 214, 244;

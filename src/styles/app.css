@@ -139,6 +139,7 @@ footer {
     padding: 10px;
     width: 100%;
     box-shadow: 0 -4px 6px var(--box-shadow-color);
+    animation: glow 1.5s infinite alternate;
 }
 
 footer .heart {
