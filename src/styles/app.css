@@ -7,11 +7,13 @@
     --nav-background-opacity: 0.8;
     --box-shadow-color: rgba(0, 0, 0, 0.1);
     --heart-glow: rgba(249, 239, 155, 0.5);
+    --un-bg-opacity: 1;
+    --un-border-opacity: 1;
 }
 
 /* General Styles */
 body {
-    font-family: 'Google Sans', system-ui, sans-serif;
+    font-family: "Google Sans", system-ui, sans-serif;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -23,41 +25,41 @@ body {
 }
 
 body::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: inherit; /* inherit the background image */
-    filter: blur(var(--background-blur)); /* Blur Radius */
-    z-index: -2; /* behind the content */
+    background: inherit;
+    filter: blur(var(--background-blur));
+    z-index: -2;
 }
 
 body::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.5) 70%);
-    z-index: -1; /* behind the content but above the blurred background */
+    z-index: -1;
 }
 
 /* Navigation Styles */
 nav {
-    background-color: rgba(31, 14, 6, var(--nav-background-opacity)); /* Adjust opacity for the backdrop filter to work */
-    backdrop-filter: blur(var(--background-blur)); /* Adjust the blur radius as needed */
+    background-color: rgba(31, 14, 6, var(--nav-background-opacity));
+    backdrop-filter: blur(var(--background-blur));
     padding: 10px;
     width: 100%;
     box-shadow: 0 4px 6px var(--box-shadow-color);
     display: flex;
-    justify-content: space-between; /* Distribute space between main nav and social nav */
+    justify-content: space-between;
     align-items: center;
-    position: sticky; /* Make the nav bar sticky */
-    top: 0; /* Stick the nav bar to the top */
-    z-index: 1000; /* Ensure the nav bar stays on top of other content */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -68,11 +70,11 @@ nav ul {
 }
 
 nav ul.main-nav {
-    justify-content: flex-start; /* Align main nav links to the left */
+    justify-content: flex-start;
 }
 
 nav ul.social-nav {
-    justify-content: flex-end; /* Align social nav links to the right */
+    justify-content: flex-end;
 }
 
 nav ul li {
@@ -97,25 +99,18 @@ hr {
     background-color: hsl(19 67% 10% / var(--un-bg-opacity));
     border-radius: 1rem;
     border-width: 0;
-    height: .5rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    height: 0.5rem;
+    margin: 1rem 0;
     width: 100%;
 }
 
-hr, html {
-    --un-bg-opacity: 1;
-}
-
-.content-cell, .outer-cell {
-    background-color: var(--secondary-color); /* Dark background for sections */
+.content-cell,
+.outer-cell {
+    background-color: var(--secondary-color);
     border-radius: 1.75rem;
-    border-width: 2px;
-    border-style: solid;
-    --un-border-opacity: 1;
-    border-color: hsl(0 15% 13% / var(--un-border-opacity));
+    border: 2px solid hsl(0 15% 13% / var(--un-border-opacity));
     padding: 1rem;
-    box-shadow: 0 0 10px var(--box-shadow-color); /* Subtle shadow */
+    box-shadow: 0 0 10px var(--box-shadow-color);
     width: 90%;
     max-width: 600px;
     margin-bottom: 1rem;
@@ -125,14 +120,13 @@ hr, html {
 .outer-cell {
     background-color: var(--tertiary-color);
     text-align: center;
-    width: 90%;
 }
 
 .skills-container {
     display: flex;
-    gap: 15px;
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Center the items vertically */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* Footer Styles */
@@ -158,13 +152,15 @@ footer .heart {
     text-align: center;
 }
 
-/* Glow Text Styles */
-.glow, .glow-no_anim {
+/* Glowing Text Styles */
+.glow,
+.glow-no_anim {
     color: var(--primary-color);
     text-shadow: 0 0 17px var(--heart-glow);
 }
 
-.glow ul, .glow li {
+.glow ul,
+.glow li {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -173,16 +169,62 @@ footer .heart {
 .glow li:before {
     content: "><";
     margin-right: 7px;
-    text-shadow: 0 0 5px var(--primary-color), 0 0 7px var(--primary-color), 0 0 12px var(--primary-color), 0 0 17px var(--primary-color), 0 0 22px var(--primary-color), 0 0 27px var(--primary-color), 0 0 34px var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color), 0 0 7px var(--primary-color),
+        0 0 12px var(--primary-color), 0 0 17px var(--primary-color),
+        0 0 22px var(--primary-color), 0 0 27px var(--primary-color),
+        0 0 34px var(--primary-color);
 }
 
-/* Responsive Design for Small Screens */
+/* Loading Screen Styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.loading-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quote {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Glowing Text Animation */
+.glow {
+    animation: glow-animation 1.5s ease-in-out infinite alternate;
+}
+
+/* Scrapped Glow Keyframes
+@keyframes glow-animation {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+            0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+            0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+    }
+}
+*/
+
 @media (min-width: 200px) and (max-width: 380px) {
     nav ul {
         flex-direction: column;
         align-items: center;
     }
-
     nav ul.main-nav {
         margin-right: 3.5rem;
     }

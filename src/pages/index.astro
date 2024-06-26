@@ -1,6 +1,10 @@
 ---
-import Layout from "../components/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 ---
+
+<div id="loading-screen" class="loading-screen">
+  <pre class="quote" id="loading-quote"></pre>
+</div>
 
 <Layout>
   <!-- Introduction Section -->
@@ -83,7 +87,7 @@ import Layout from "../components/Layout.astro";
   <!-- JavaScript for Background Image Preloading and Random Selection -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const backgrounds: string[] = [
+      const BACKGROUNDS: string[] = [
         "assets/backgrounds/back1.png",
         "assets/backgrounds/back2.png",
         "assets/backgrounds/back3.png",
@@ -103,31 +107,61 @@ import Layout from "../components/Layout.astro";
         "assets/backgrounds/back17.png",
         "assets/backgrounds/back18.png",
         "assets/backgrounds/back19.png",
-        "assets/backgrounds/freak1.jpg"
+        "assets/backgrounds/freak1.jpg",
       ];
 
       function preloadImages(images: string[]): void {
-        images.forEach((image: string) => {
-          const img = new Image();
-          img.src = image;
-        });
-      }
-
-      function getRandomBackground(exclude: string): string {
-        let randomIndex: number;
-        do {
-          randomIndex = Math.floor(Math.random() * backgrounds.length);
-        } while (backgrounds[randomIndex] === exclude);
-        return backgrounds[randomIndex];
-      }
-
-      const lastBackground: string | null = localStorage.getItem("lastBackground");
-      const selectedBackground: string = getRandomBackground(lastBackground || "");
-
-      document.body.style.backgroundImage = `url(${selectedBackground})`;
-      localStorage.setItem("lastBackground", selectedBackground);
-
-      preloadImages(backgrounds);
+    images.forEach((image: string) => {
+      const img = new Image();
+      img.src = image;
     });
+  }
+
+  function getRandomBackground(exclude: string): string {
+    let randomIndex: number;
+    do {
+      randomIndex = Math.floor(Math.random() * BACKGROUNDS.length);
+    } while (BACKGROUNDS[randomIndex] === exclude);
+    return BACKGROUNDS[randomIndex];
+  }
+
+  function setBackgroundImage(): void {
+    const lastBackground = localStorage.getItem("lastBackground") || "";
+    const selectedBackground = getRandomBackground(lastBackground);
+    document.body.style.backgroundImage = `url(${selectedBackground})`;
+    localStorage.setItem("lastBackground", selectedBackground);
+    preloadImages(BACKGROUNDS);
+  }
+
+  function typeQuote(quote: string, element: HTMLElement, index: number = 0): void {
+    if (index < quote.length) {
+      element.innerHTML += quote.charAt(index);
+      setTimeout(() => typeQuote(quote, element, index + 1), 100);
+    } else {
+      element.classList.add("glow");
+      fadeOutLoadingScreen();
+    }
+  }
+
+  function fadeOutLoadingScreen(): void {
+    const loadingScreen = document.getElementById("loading-screen");
+    if (loadingScreen) {
+      setTimeout(() => loadingScreen.classList.add("fade-out"), 1000); // 1 second delay
+    }
+  }
+
+  function initialize(): void {
+    const quote = "Let your worries be, do not be afraid.";
+    const loadingQuoteElem = document.getElementById("loading-quote") as HTMLElement | null;
+
+    if (loadingQuoteElem) {
+      typeQuote(quote, loadingQuoteElem);
+    }
+
+    setBackgroundImage();
+  }
+
+  initialize();
+});
   </script>
 </Layout>
