@@ -2,11 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<div id="loading-screen" class="loading-screen">
-  <pre class="quote" id="loading-quote"></pre>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loading-text">
+    <p id="quote"></p>
+  </div>
 </div>
 
-<Layout>
+<Layout id="main-content" style="display: none;">
   <!-- Introduction Section -->
   <section class="content-cell">
     <h2>Introduction:</h2>
@@ -111,57 +114,67 @@ import Layout from "../layouts/Layout.astro";
       ];
 
       function preloadImages(images: string[]): void {
-    images.forEach((image: string) => {
-      const img = new Image();
-      img.src = image;
+        images.forEach((image: string) => {
+          const img = new Image();
+          img.src = image;
+        });
+      }
+
+      function getRandomBackground(exclude: string): string {
+        let randomIndex: number;
+        do {
+          randomIndex = Math.floor(Math.random() * BACKGROUNDS.length);
+        } while (BACKGROUNDS[randomIndex] === exclude);
+        return BACKGROUNDS[randomIndex];
+      }
+
+      function setBackgroundImage(): void {
+        const lastBackground = localStorage.getItem("lastBackground") || "";
+        const selectedBackground = getRandomBackground(lastBackground);
+        document.body.style.backgroundImage = `url(${selectedBackground})`;
+        localStorage.setItem("lastBackground", selectedBackground);
+        preloadImages(BACKGROUNDS);
+      }
+
+      setBackgroundImage();
     });
-  }
-
-  function getRandomBackground(exclude: string): string {
-    let randomIndex: number;
-    do {
-      randomIndex = Math.floor(Math.random() * BACKGROUNDS.length);
-    } while (BACKGROUNDS[randomIndex] === exclude);
-    return BACKGROUNDS[randomIndex];
-  }
-
-  function setBackgroundImage(): void {
-    const lastBackground = localStorage.getItem("lastBackground") || "";
-    const selectedBackground = getRandomBackground(lastBackground);
-    document.body.style.backgroundImage = `url(${selectedBackground})`;
-    localStorage.setItem("lastBackground", selectedBackground);
-    preloadImages(BACKGROUNDS);
-  }
-
-  function typeQuote(quote: string, element: HTMLElement, index: number = 0): void {
-    if (index < quote.length) {
-      element.innerHTML += quote.charAt(index);
-      setTimeout(() => typeQuote(quote, element, index + 1), 100);
-    } else {
-      element.classList.add("glow");
-      fadeOutLoadingScreen();
-    }
-  }
-
-  function fadeOutLoadingScreen(): void {
-    const loadingScreen = document.getElementById("loading-screen");
-    if (loadingScreen) {
-      setTimeout(() => loadingScreen.classList.add("fade-out"), 1000); // 1 second delay
-    }
-  }
-
-  function initialize(): void {
-    const quote = "Let your worries be, do not be afraid.";
-    const loadingQuoteElem = document.getElementById("loading-quote") as HTMLElement | null;
-
-    if (loadingQuoteElem) {
-      typeQuote(quote, loadingQuoteElem);
-    }
-
-    setBackgroundImage();
-  }
-
-  initialize();
-});
   </script>
 </Layout>
+
+<script>
+  // Loading screen logic
+  document.addEventListener("DOMContentLoaded", function () {
+    const loadingScreen = document.getElementById("loading-screen");
+    const mainContent = document.getElementById("main-content");
+    const quoteElement = document.getElementById("quote");
+
+    function showMainContent() {
+      if (loadingScreen) {
+        loadingScreen.style.opacity = "0";
+        setTimeout(() => {
+          if (loadingScreen) loadingScreen.style.display = "none";
+          if (mainContent) mainContent.style.display = "block";
+        }, 1000);
+      }
+    }
+
+    // Simulate typing effect
+    const quoteText = "Let your worries be, do not be afraid.";
+    let index = 0;
+    const typingSpeed = 100; // Adjust typing speed here
+
+    function typeQuote() {
+      if (quoteElement) {
+        if (index < quoteText.length) {
+          quoteElement.innerHTML += quoteText.charAt(index);
+          index++;
+          setTimeout(typeQuote, typingSpeed);
+        } else {
+          setTimeout(showMainContent, 1000); // Delay before showing the main content
+        }
+      }
+    }
+
+    typeQuote();
+  });
+</script>
