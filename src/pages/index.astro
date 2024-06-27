@@ -161,7 +161,7 @@ import Layout from "../layouts/Layout.astro";
     // Simulate typing effect
     const quoteText = "Let your worries be, do not be afraid.";
     let index = 0;
-    const typingSpeed = 100; // Adjust typing speed here
+    const typingSpeed = 100;
 
     function typeQuote() {
       if (quoteElement) {
@@ -170,7 +170,7 @@ import Layout from "../layouts/Layout.astro";
           index++;
           setTimeout(typeQuote, typingSpeed);
         } else {
-          setTimeout(showMainContent, 1000); // Delay before showing the main content
+          setTimeout(showMainContent, 1000);
         }
       }
     }
