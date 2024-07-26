@@ -84,7 +84,6 @@ import Layout from "../layouts/Layout.astro";
     </section>
   </section>
 
-  <!-- JavaScript for Background Image Preloading and Random Selection -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const BACKGROUNDS: string[] = [
@@ -194,7 +193,7 @@ import Layout from "../layouts/Layout.astro";
             index++;
             setTimeout(type, typingSpeed);
           } else {
-            setTimeout(showMainContent, 1000); // Delay before showing the main content
+            setTimeout(showMainContent, 1000);
           }
         }
       }
