@@ -44,6 +44,8 @@
     animation: glow 1.5s infinite alternate;
   }
 
+  /* Scrapped keyframes for the PC to not explode 
+  
   @keyframes glow {
     from {
       text-shadow: 0 0 5px rgba(249, 239, 155, 0.5);
@@ -52,4 +54,5 @@
       text-shadow: 0 0 10px rgba(249, 239, 155, 0.7);
     }
   }
+  */
 </style>

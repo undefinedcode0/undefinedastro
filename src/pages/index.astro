@@ -24,10 +24,7 @@ import Layout from "../layouts/Layout.astro";
     <h2>About Me:</h2>
     <p>
       Me? Just a person who likes computers and programming. I'm pretty chill
-      and active on Discord. You can find me at
-      <a href="https://discord.com/users/924466450578690079" class="glow">
-        @undefinedcode
-      </a>.
+      and active on Discord. You can find me at <span class="glow">@undefinedcode</span>.
     </p>
   </section>
 
@@ -47,8 +44,8 @@ import Layout from "../layouts/Layout.astro";
   <section id="servers" class="content-cell">
     <h2>Servers:</h2>
     <ul class="glow">
-      <li>Murder Drones Basement</li>
-      <li>H Gang Community</li>
+      <li>Murder Drones Basement</li> <!-- Keep this for now. I'll decide later. -->
+      <li>H Gang Community</li> <!-- Hmm... -->
       <li>MalwarePad's Network</li>
       <li>OpenXP</li>
       <li>bullshit🤑🙏 - "hail brit!"</li>
@@ -61,28 +58,28 @@ import Layout from "../layouts/Layout.astro";
     <section class="outer-cell">
       <h2>Languages</h2>
       <div class="skills-container">
-        <i class="c-icon">C</i>
-        <i class="cpp-icon">C++</i>
-        <i class="csharp-icon">C#</i>
-        <i class="html5-icon">HTML5</i>
-        <i class="css-icon">CSS</i>
-        <i class="js-icon">JavaScript</i>
+        <i class="blue">C</i>
+        <i class="light-blue">C++</i>
+        <i class="green">C#</i>
+        <i class="orange">HTML5</i>
+        <i class="light-blue">CSS</i>
+        <i class="orange">JavaScript</i>
       </div>
       <hr />
       <h2>Frameworks</h2>
       <div class="skills-container">
-        <i class="astro-icon">Astro</i>
-        <i class="svelte-icon">Svelte</i>
-        <i class="nodejs-icon">NodeJS</i>
+        <i class="light-blue">Astro</i>
+        <i class="orange">Svelte</i>
+        <i class="green">NodeJS</i>
       </div>
       <hr />
       <h2>Tools</h2>
       <div class="skills-container">
-        <i class="neovim-icon">Neovim</i>
-        <i class="shell-icon">Shell</i>
-        <i class="linux-icon">Linux</i>
-        <i class="github-icon">GitHub</i>
-        <i class="git-icon">Git</i>
+        <i class="green">Neovim</i>
+        <i class="light-blue">Shell</i>
+        <i class="light-blue">Linux</i>
+        <i class="light-blue">GitHub</i>
+        <i class="orange">Git</i>
       </div>
     </section>
   </section>
@@ -157,7 +154,6 @@ import Layout from "../layouts/Layout.astro";
       }
     }
 
-    // Simulate typing effect
     const quotes = [
       "Let your worries fade in the soft embrace of a summer breeze, and let your courage bloom.",
       "As the snow falls softly on the quiet forest, so let your heart come to rest, and your spirit stand firm.",
