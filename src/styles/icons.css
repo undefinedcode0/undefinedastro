@@ -4,7 +4,9 @@
   animation: glow 1.5s infinite alternate;
 }
 
-/* Colors */
+/* Manually typed these definitions with my half-dead fingers. Pulled from catppuccin's color pallete.
+ * Half of the colors are not present due to them being unused throughout "src/index.astro"
+ */
 
 .pink {
   --color: 245, 194, 231;
@@ -77,6 +79,8 @@
   color: rgb(var(--color));
   animation: glow 1.5s infinite alternate;
 }
+
+/* The "light-blue" class is just the "text" color from catppuccin's website. */
 
 /* Scrapped keyframes to save the PC from exploding
 

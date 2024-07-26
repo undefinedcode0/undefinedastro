@@ -32,6 +32,7 @@ import Layout from "../layouts/Layout.astro";
   <section id="friends" class="content-cell">
     <h2>Friends:</h2>
     <ul class="glow">
+      <!-- The italics indicate display names on their discord profile. -->
       <li>who_is_vee -- <i>Vee</i></li>
       <li>alocalbrit. -- <i>☩[ alxcalbrxt. ]☩ (brit)</i></li>
       <li>wtf.cynn -- <i>jothemf</i></li>
@@ -44,11 +45,12 @@ import Layout from "../layouts/Layout.astro";
   <section id="servers" class="content-cell">
     <h2>Servers:</h2>
     <ul class="glow">
+      <!-- The italics in this section indicate quotes. -->
       <li>Murder Drones Basement</li> <!-- Keep this for now. I'll decide later. -->
       <li>H Gang Community</li> <!-- Hmm... -->
       <li>MalwarePad's Network</li>
       <li>OpenXP</li>
-      <li>bullshit🤑🙏 - "hail brit!"</li>
+      <li>bullshit🤑🙏 - <i>"hail brit!"</i></li>
     </ul>
   </section>
 
@@ -56,6 +58,7 @@ import Layout from "../layouts/Layout.astro";
   <section id="skills" class="content-cell">
     <h2>Skills:</h2>
     <section class="outer-cell">
+      <!-- Removed hardcoded colors and added classes for each color. -->
       <h2>Languages</h2>
       <div class="skills-container">
         <i class="blue">C</i>
@@ -106,7 +109,7 @@ import Layout from "../layouts/Layout.astro";
         "assets/backgrounds/back17.png",
         "assets/backgrounds/back18.png",
         "assets/backgrounds/back19.png",
-      ];
+      ]; // Is it okay to hardcode backgrounds? Meh, I'll see it later.
 
       function preloadImages(images: string[]): void {
         images.forEach((image: string) => {
@@ -134,10 +137,10 @@ import Layout from "../layouts/Layout.astro";
       setBackgroundImage();
     });
   </script>
+  <!-- My poor fingers... -->
 </Layout>
 
 <script>
-  // Loading screen logic
   document.addEventListener("DOMContentLoaded", function () {
     const loadingScreen = document.getElementById("loading-screen");
     const mainContent = document.getElementById("main-content");
@@ -173,7 +176,7 @@ import Layout from "../layouts/Layout.astro";
       "Let clarity bring you strength and peace, your soul, to ground.",
       "Hear the whisper of courage in the rustle of autumn leaves and the promise of renewal.",
       "Beneath the still surface of an azure sea, find the depths of your strength and the rest of your heart."
-    ];
+    ]; // Quotes I made myself.
 
     function getRandomQuote(): string {
       const randomIndex = Math.floor(Math.random() * quotes.length);
