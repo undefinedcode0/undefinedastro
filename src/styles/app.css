@@ -4,7 +4,7 @@
   --tertiary-color: #241007;
   --text-color: hsl(41deg, 64%, 88%);
   --background-blur: 10px;
-  --nav-background-opacity: 1;
+  --nav-background-opacity: 1; /* Had to tune the opacity up to 1 instead of 0.8 for a bit more performance for the user. */
   --box-shadow-color: rgba(0, 0, 0, 0.1);
   --heart-glow: rgba(249, 239, 155, 0.5);
   --un-bg-opacity: 1;
@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: "Google Sans", system-ui, sans-serif;
+  font-family: "Google Sans", system-ui, sans-serif; /* I need to find a better font for this shit. */
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -207,7 +207,7 @@ footer .heart {
 }
 
 .glow li:before {
-  content: "><";
+  content: "><"; /* Made this the bullet points because why not mane. */
   margin-right: 7px;
   font-size: 17px;
   font-weight: 700;
@@ -234,7 +234,7 @@ footer .heart {
 
 /* Ah shit, why is this so confusing */
 
-@media (max-width: 768px) {
+@media (max-width: 768px /* More small display shit. */) {
   .content-cell,
   .outer-cell {
     width: 100%;
@@ -250,7 +250,7 @@ footer .heart {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px /* Small displays */) {
   nav ul {
     flex-direction: column;
     align-items: center;

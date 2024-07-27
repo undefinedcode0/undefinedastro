@@ -17,6 +17,7 @@ import Layout from "../layouts/Layout.astro";
       Hey, buddy. My name is <span class="glow">undefinedcode</span>. Nice to
       meet you.
     </p>
+    <!-- I need to elaborate more on myself -->
   </section>
 
   <!-- About Me Section -->
@@ -24,8 +25,9 @@ import Layout from "../layouts/Layout.astro";
     <h2>About Me:</h2>
     <p>
       Me? Just a person who likes computers and programming. I'm pretty chill
-      and active on Discord. You can find me at <span class="glow">@undefinedcode</span>.
+      and active on Discord. You can find me at <span class="glow">@undefinedcode</span>. <!-- Adding span classes inside p classes seems a bit wrong... -->
     </p>
+    <!-- This too -->
   </section>
 
   <!-- Friends Section -->
@@ -83,6 +85,7 @@ import Layout from "../layouts/Layout.astro";
         <i class="light-blue">Linux</i>
         <i class="light-blue">GitHub</i>
         <i class="orange">Git</i>
+        <!-- Ah fuck, more green light-blue orange shit. PLease help me. -->
       </div>
     </section>
   </section>
@@ -184,7 +187,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     let index = 0;
-    const typingSpeed = 43;
+    const typingSpeed = 43; // I thought this was for Words-Per-Minute for a sec. Turns out it was for milliseconds.
 
     function typeQuote() {
       const quoteText = getRandomQuote();

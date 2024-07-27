@@ -4,8 +4,13 @@
   animation: glow 1.5s infinite alternate;
 }
 
-/* Manually typed these definitions with my half-dead fingers. Pulled from catppuccin's color pallete.
+/* Manually typed these definitions with my half-dead fingers. Pulled from catppuccin's color palette.
+ * Credit to "https://catppuccin.com/palette"
  * Half of the colors are not present due to them being unused throughout "src/index.astro"
+ * Also messed up on the semicolons a LOT.
+ *
+ *
+ * The "animation" things are needed for the text to glow.
  */
 
 .pink {
