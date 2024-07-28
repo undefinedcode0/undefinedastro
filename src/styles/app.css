@@ -4,7 +4,7 @@
   --tertiary-color: #241007;
   --text-color: hsl(41deg, 64%, 88%);
   --background-blur: 10px;
-  --nav-background-opacity: 1; /* Had to tune the opacity up to 1 instead of 0.8 for a bit more performance for the user. */
+  /* --nav-background-opacity: 1; */
   --box-shadow-color: rgba(0, 0, 0, 0.1);
   --heart-glow: rgba(249, 239, 155, 0.5);
   --un-bg-opacity: 1;
@@ -47,8 +47,10 @@ body::after {
 }
 
 nav {
-  background-color: rgba(31, 14, 6, var(--nav-background-opacity));
-  backdrop-filter: blur(var(--background-blur));
+  /* background-color: rgba(31, 14, 6, var(--nav-background-opacity));
+   * backdrop-filter: blur(var(--background-blur));
+   * Isn't needed if i made it opaque in the ":root" class. 
+   */
   padding: 10px;
   width: 100%;
   box-shadow: 0 4px 6px var(--box-shadow-color);
