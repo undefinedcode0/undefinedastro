@@ -47,7 +47,8 @@ body::after {
 }
 
 nav {
-  /* background-color: rgba(31, 14, 6, var(--nav-background-opacity));
+  background-color: rgba(31, 14, 6/*, var(--nav-background-opacity)*/);
+  /*
    * backdrop-filter: blur(var(--background-blur));
    * Isn't needed if i made it opaque in the ":root" class. 
    */
