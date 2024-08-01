@@ -16,7 +16,7 @@ import Layout from "../layouts/Layout.astro";
   <section class="content-cell">
     <h2>Introduction:</h2>
     <p>
-      Hey, buddy. My name is <span class="glow">undefinedcode</span>. Nice to
+      Hey, buddy. My name is <span class="glow">undefined</span>. Nice to
       meet you.
     </p>
     <!-- I need to elaborate more on myself -->
@@ -113,7 +113,7 @@ import Layout from "../layouts/Layout.astro";
         "assets/backgrounds/back17.png",
         "assets/backgrounds/back18.png",
         "assets/backgrounds/back19.png",
-      ]; // Is it okay to hardcode backgrounds? Meh, I'll see it later.
+      ];
 
       function preloadImages(images: string[]): void {
         images.forEach((image: string) => {
@@ -188,7 +188,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     let index = 0;
-    const typingSpeed = 43; // I thought this was for Words-Per-Minute for a sec. Turns out it was for milliseconds.
+    const typingSpeed = 43;
 
     function typeQuote() {
       const quoteText = getRandomQuote();
