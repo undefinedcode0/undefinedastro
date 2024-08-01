@@ -78,7 +78,7 @@ import Layout from "../layouts/Layout.astro";
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const BACKGROUNDS = [
+    const BACKGROUNDS: string[] = [
         "assets/backgrounds/back1.png",
         "assets/backgrounds/back2.png",
         "assets/backgrounds/back3.png",
@@ -100,22 +100,22 @@ import Layout from "../layouts/Layout.astro";
         "assets/backgrounds/back19.png",
     ];
 
-    function preloadImages(images) {
-      images.forEach((image) => {
+    function preloadImages(images: string[]): void {
+      images.forEach((image: string) => {
         const img = new Image();
         img.src = image;
       });
     }
 
-    function getRandomBackground(exclude) {
-      let randomIndex;
+    function getRandomBackground(exclude: string): string {
+      let randomIndex: number;
       do {
         randomIndex = Math.floor(Math.random() * BACKGROUNDS.length);
       } while (BACKGROUNDS[randomIndex] === exclude);
       return BACKGROUNDS[randomIndex];
     }
 
-    function setBackgroundImage() {
+    function setBackgroundImage(): void {
       const lastBackground = localStorage.getItem("lastBackground") || "";
       const selectedBackground = getRandomBackground(lastBackground);
       document.body.style.backgroundImage = `url(${selectedBackground})`;
@@ -130,7 +130,7 @@ import Layout from "../layouts/Layout.astro";
   const mainContent = document.getElementById("main-content");
   const quoteElement = document.getElementById("quote");
 
-  function showMainContent() {
+  function showMainContent(): void {
     if (loadingScreen) {
       loadingScreen.style.opacity = "0";
       setTimeout(() => {
@@ -140,14 +140,14 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 
-  const quotes = [
+  const quotes: string[] = [
     "Let your worries fade in the soft embrace of a summer breeze, and let your courage bloom.",
     "As the snow falls softly on the quiet forest, so let your heart come to rest, and your spirit stand firm.",
     "When you feel it there, gain the power to persist in the whispering leaves of an ageless oak and receive the serenity to endure.",
     "Listen to courage on the quiet ripple of a mountain stream, 'Neath dawn so clear and tranquil, gain strength for a new start; gain grace to pause.",
     "In a deep, restful shade of a willow tree, allow fears to disappear and let your inner light shine.",
     "As the sun sets over a placid lake, find the peace to reflect on your journey and the courage to continue.",
-	  "In the distant thunder lullaby, feel the power within and the calm before every storm.",
+    "In the distant thunder lullaby, feel the power within and the calm before every storm.",
     "At twilight's soft gleaming, may your spirit find rest and your heart lift with quiet bravery.",
     "In the gentle sway of golden fields, find the peace to breathe deeply and the strength to stand tall.",
     "Under a canopy of stars, let your dreams soar—be brave enough to reach them yet peaceful enough to believe.",
@@ -162,7 +162,7 @@ import Layout from "../layouts/Layout.astro";
     "Beneath the still surface of an azure sea, find the depths of your strength and the rest of your heart."
   ];
 
-  function getRandomQuote() {
+  function getRandomQuote(): string {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     return quotes[randomIndex];
   }
@@ -170,9 +170,9 @@ import Layout from "../layouts/Layout.astro";
   let index = 0;
   const typingSpeed = 43;
 
-  function typeQuote() {
+  function typeQuote(): void {
     const quoteText = getRandomQuote();
-    function type() {
+    function type(): void {
       if (quoteElement) {
         if (index < quoteText.length) {
           quoteElement.innerHTML += quoteText.charAt(index);
