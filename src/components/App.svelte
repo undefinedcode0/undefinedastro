@@ -3,9 +3,6 @@
 
   const links = [
     { href: "/", text: "Home" },
-    { href: "https://github.com/undefinedcode0", text: "GitHub" },
-    { href: "https://www.youtube.com/channel/UCmMYkdnhCKMODPm3MFlj3_w", text: "YouTube" },
-    { href: "https://x.com/undefinedcode0", text: "Twitter" },
   ];
 </script>
 
