@@ -4,10 +4,7 @@
   const links = [
     { href: "/", text: "Home" },
     { href: "https://github.com/undefinedcode0", text: "GitHub" },
-    {
-      href: "https://www.youtube.com/channel/UCmMYkdnhCKMODPm3MFlj3_w",
-      text: "YouTube",
-    },
+    { href: "https://www.youtube.com/channel/UCmMYkdnhCKMODPm3MFlj3_w", text: "YouTube" },
     { href: "https://x.com/undefinedcode0", text: "Twitter" },
   ];
 </script>
@@ -43,16 +40,4 @@
     text-shadow: 0 0 5px rgba(249, 239, 155, 0.5);
     animation: glow 1.5s infinite alternate;
   }
-
-  /* Scrapped keyframes for the PC to not explode 
-  
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 5px rgba(249, 239, 155, 0.5);
-    }
-    to {
-      text-shadow: 0 0 10px rgba(249, 239, 155, 0.7);
-    }
-  }
-  */
 </style>

@@ -4,15 +4,12 @@
   --tertiary-color: #241007;
   --text-color: hsl(41deg, 64%, 88%);
   --background-blur: 10px;
-  /* --nav-background-opacity: 1; */
   --box-shadow-color: rgba(0, 0, 0, 0.1);
   --heart-glow: rgba(249, 239, 155, 0.5);
-  --un-bg-opacity: 1;
-  --un-border-opacity: 1;
 }
 
 body {
-  font-family: "Google Sans", system-ui, sans-serif; /* I need to find a better font for this shit. */
+  font-family: "Google Sans", system-ui, sans-serif;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -47,16 +44,11 @@ body::after {
 }
 
 nav {
-  background-color: rgba(31, 14, 6/*, var(--nav-background-opacity)*/);
-  /*
-   * backdrop-filter: blur(var(--background-blur));
-   * Isn't needed if i made it opaque in the ":root" class. 
-   */
+  background-color: rgba(31, 14, 6, 1);
   padding: 10px;
   width: 100%;
   box-shadow: 0 4px 6px var(--box-shadow-color);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
@@ -68,14 +60,6 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-nav ul.main-nav {
-  justify-content: flex-start;
-}
-
-nav ul.social-nav {
-  justify-content: flex-end;
 }
 
 nav ul li {
@@ -95,8 +79,6 @@ nav ul li a {
   width: 100%;
   height: 100%;
   background-color: var(--secondary-color);
-  background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +90,7 @@ nav ul li a {
 .loading-text {
   font-size: 1.5rem; 
   font-weight: 400;
-  font-family: "Google Sans", system-ui, sans-serif;
+  font-family: "Roboto", system-ui, sans-serif;
   color: var(--primary-color);
   text-shadow: 0 0 10px var(--primary-color);
 }
@@ -139,7 +121,7 @@ main {
 }
 
 hr {
-  background-color: hsl(19 67% 10% / var(--un-bg-opacity));
+  background-color: hsl(19 67% 10%);
   border-radius: 1rem;
   border-width: 0;
   height: 0.5rem;
@@ -151,7 +133,7 @@ hr {
 .outer-cell {
   background-color: var(--secondary-color);
   border-radius: 1.75rem;
-  border: 2px solid hsl(0 15% 13% / var(--un-border-opacity));
+  border: 2px solid hsl(0 15% 13%);
   padding: 1rem;
   box-shadow: 0 0 10px var(--box-shadow-color);
   width: 90%;
@@ -182,7 +164,6 @@ footer {
   padding: 10px;
   width: 100%;
   box-shadow: 0 -4px 6px var(--box-shadow-color);
-  animation: glow 1.5s infinite alternate;
 }
 
 footer .heart {
@@ -210,34 +191,13 @@ footer .heart {
 }
 
 .glow li:before {
-  content: "><"; /* Made this the bullet points because why not mane. */
+  content: "><";
   margin-right: 7px;
   font-size: 17px;
   font-weight: 700;
-  /* Performance muncher; fallback to font-weights.
-    text-shadow: 0 0 5px var(--primary-color), 0 0 7px var(--primary-color),
-        0 0 12px var(--primary-color), 0 0 17px var(--primary-color),
-        0 0 22px var(--primary-color), 0 0 27px var(--primary-color),
-        0 0 34px var(--primary-color);
-    */
 }
 
-/* Scrapped Glow Keyframes
-@keyframes glow-animation {
-    from {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-            0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-    }
-    to {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
-            0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
-    }
-}
-*/
-
-/* Ah shit, why is this so confusing */
-
-@media (max-width: 768px /* More small display shit. */) {
+@media (max-width: 768px) {
   .content-cell,
   .outer-cell {
     width: 100%;
@@ -253,7 +213,7 @@ footer .heart {
   }
 }
 
-@media (max-width: 480px /* Small displays */) {
+@media (max-width: 480px) {
   nav ul {
     flex-direction: column;
     align-items: center;
