@@ -6,7 +6,7 @@
 # _Build_
 ## Requirements:
 - npm (Latest available build)
-- An Text Editor
+- A Text Editor
 - Git
 
 ## Instructions
