@@ -2,42 +2,49 @@
   export let links = [];
 </script>
 
-<nav>
-  <ul>
+<nav class="tui-nav">
+  <ul class="tui-nav-list">
     {#each links as { href, text }}
-      <li><a href={href}>{text}</a></li>
+      <li class="tui-nav-item"><a href={href}>{text}</a></li>
     {/each}
   </ul>
 </nav>
 
 <style>
-  nav {
-    background-color: rgba(31, 14, 6, 1);
+  .tui-nav {
+    background-color: var(--secondary-color);
     padding: 10px;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--primary-color);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    font-family: 'DM Mono', monospace;
+    color: var(--primary-color);
   }
 
-  nav ul {
+  .tui-nav-list {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  nav ul li {
+  .tui-nav-item {
     margin: 0 0.75rem;
   }
 
-  nav ul li a {
-    color: #f9e2af;
+  .tui-nav-item a {
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+
+  .tui-nav-item a:hover {
+    border-bottom: 2px solid var(--primary-color);
   }
 </style>

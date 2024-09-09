@@ -8,33 +8,46 @@
 
 <Nav {links} />
 
-<main>
+<main class="tui-main">
   <slot />
 </main>
 
-<footer>
-  <p>Made with <span class="heart">&#10084;</span> by undefinedcode.</p>
+<footer class="tui-footer">
+  <p>Made with <span class="tui-heart">&#10084;</span> by undefinedcode.</p>
 </footer>
 
 <style>
-  main {
+  .tui-main {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    font-family: 'DM Mono', monospace;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    width: 100%;
   }
 
-  footer {
-    background-color: #1f0e06;
-    color: #f9ef9b;
+  .tui-footer {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
     text-align: center;
     padding: 10px;
     width: 100%;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--primary-color);
   }
 
-  .heart {
-    text-shadow: 0 0 5px rgba(249, 239, 155, 0.5);
-    animation: glow 1.5s infinite alternate;
+  .tui-heart {
+    color: var(--primary-color);
+    animation: blink 1.5s infinite alternate;
+  }
+
+  @keyframes blink {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.5;
+    }
   }
 </style>

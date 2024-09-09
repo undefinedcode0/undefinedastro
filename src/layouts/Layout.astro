@@ -8,29 +8,21 @@ import "../styles/colors.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap">    
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=dm-mono:400,500,70:width0">    
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <title>undefinedcode</title>
   </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav>
-      <!-- Main Navigation -->
-      <ul class="main-nav">
-        <li class="glow-no_anim">
-          <a href="/">undefined</a>
-        </li>
-      </ul>
-     </nav>
+  <body class="tui-body">
     
     <!-- Main Content Area -->
-    <main>
+    <main class="tui-main">
       <slot />
     </main>
     
     <!-- Footer -->
-    <footer>
-      <p>Made with <span class="heart">&#10084;</span> by undefinedcode.</p>
+    <footer class="tui-footer">
+      <p>Made with <span class="tui-heart">&#10084;</span> by undefinedcode.</p>
     </footer>
   </body>
 </html>
+

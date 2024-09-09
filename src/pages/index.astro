@@ -14,17 +14,27 @@ import Layout from "../layouts/Layout.astro";
 <Layout id="main-content" style="display: none;">
   <!-- Introduction Section -->
   <section class="content-cell">
-    <h2>Who am I?:</h2>
+    <pre>
+  ╔════════════════════╗
+  ║ who am i?          ║
+  ╚════════════════════╝
+    </pre>
     <p>
-      My name is <span class="glow">undefinedcode</span>. Nice to meet you! I am a technology and programming enthusiast. I am a relaxed and introverted individual who is active on Discord. You can find me at <span class="glow">@undefinedcode</span>.
+      My name is <span class="glow">undefinedcode</span>. Nice to meet you! 
+      I am a technology and programming enthusiast. 
+      I am a relaxed and introverted individual who is active on Discord. You can find me at <span class="glow">@undefinedcode</span>.
     </p>
   </section>
 
   <!-- Friends Section -->
   <section id="friends" class="content-cell">
-    <h2>Friends:</h2>
+    <pre>
+  ╔════════════════════╗
+  ║ friends            ║
+  ╚════════════════════╝
+    </pre>
     <ul class="glow">
-	  <li title="best freakpal no lie">alocalbrit. -- <i>☩[ alxcalbrxt. ]☩ (brit)</i></li> <!-- Best freakpal -->
+      <li title="best freakpal no lie">alocalbrit. -- <i>☩[ alxcalbrxt. ]☩ (brit)</i></li> <!-- Best freakpal -->
       <li>wtf.cynn -- <i>jothemf</i></li>
       <li>pixiesstickss -- <i>jay</i></li>
       <li>w0rm.t -- <i>sal</i></li>
@@ -34,19 +44,27 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- Servers Section -->
   <section id="servers" class="content-cell">
-    <h2>Servers:</h2>
+    <pre>
+  ╔════════════════════╗
+  ║ servers            ║
+  ╚════════════════════╝
+    </pre>
     <ul class="glow">
       <li title="freak hangout, best server i've ever been">bullshit🤑🙏 - <i>"hail brit!"</i></li>
       <li>H Gang Community</li>
       <li>MalwarePad's Network</li>
-      <li>OpenXP</li>
+      <li title="current developer as of 8-30-2024.">OpenXP</li>
     </ul>
   </section>
 
   <!-- Skills Section -->
   <section id="skills" class="content-cell">
-    <h2>Skills:</h2>
-    <div class="outer-cell">
+    <pre>
+  ╔════════════════════╗
+  ║ skills             ║
+  ╚════════════════════╝
+    </pre>
+    <div class="content-cell">
       <h3>Languages</h3>
       <div class="skills-container">
         <i class="blue">C</i>
@@ -74,63 +92,26 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+
+  <section id="organizations" class="content-cell">
+    <pre>
+  ╔════════════════════╗
+  ║ organizations      ║
+  ╚════════════════════╝
+    </pre>
+    <ul class="glow">
+      <li>OpenXP</li>
+    </ul>
+  </section>
+
 </Layout>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const BACKGROUNDS: string[] = [
-        "assets/backgrounds/back1.png",
-        "assets/backgrounds/back2.png",
-        "assets/backgrounds/back3.png",
-        "assets/backgrounds/back4.png",
-        "assets/backgrounds/back5.png",
-        "assets/backgrounds/back6.png",
-        "assets/backgrounds/back7.png",
-        "assets/backgrounds/back8.png",
-        "assets/backgrounds/back9.png",
-        "assets/backgrounds/back10.png",
-        "assets/backgrounds/back11.png",
-        "assets/backgrounds/back12.png",
-        "assets/backgrounds/back13.png",
-        "assets/backgrounds/back14.png",
-        "assets/backgrounds/back15.png",
-        "assets/backgrounds/back16.png",
-        "assets/backgrounds/back17.png",
-        "assets/backgrounds/back18.png",
-        "assets/backgrounds/back19.png",
-    ];
-
-    function preloadImages(images: string[]): void {
-      images.forEach((image: string) => {
-        const img = new Image();
-        img.src = image;
-      });
-    }
-
-    function getRandomBackground(exclude: string): string {
-      let randomIndex: number;
-      do {
-        randomIndex = Math.floor(Math.random() * BACKGROUNDS.length);
-      } while (BACKGROUNDS[randomIndex] === exclude);
-      return BACKGROUNDS[randomIndex];
-    }
-
-    function setBackgroundImage(): void {
-      const lastBackground = localStorage.getItem("lastBackground") || "";
-      const selectedBackground = getRandomBackground(lastBackground);
-      document.body.style.backgroundImage = `url(${selectedBackground})`;
-      localStorage.setItem("lastBackground", selectedBackground);
-      preloadImages(BACKGROUNDS);
-    }
-
-    setBackgroundImage();
-  });
-
   const loadingScreen = document.getElementById("loading-screen");
   const mainContent = document.getElementById("main-content");
   const quoteElement = document.getElementById("quote");
 
-  function showMainContent(): void {
+  function showMainContent() {
     if (loadingScreen) {
       loadingScreen.style.opacity = "0";
       setTimeout(() => {
@@ -140,7 +121,7 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 
-  const quotes: string[] = [
+  const quotes = [
     "Let your worries fade in the soft embrace of a summer breeze, and let your courage bloom.",
     "As the snow falls softly on the quiet forest, so let your heart come to rest, and your spirit stand firm.",
     "When you feel it there, gain the power to persist in the whispering leaves of an ageless oak and receive the serenity to endure.",
@@ -162,7 +143,7 @@ import Layout from "../layouts/Layout.astro";
     "Beneath the still surface of an azure sea, find the depths of your strength and the rest of your heart."
   ];
 
-  function getRandomQuote(): string {
+  function getRandomQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     return quotes[randomIndex];
   }
@@ -170,9 +151,9 @@ import Layout from "../layouts/Layout.astro";
   let index = 0;
   const typingSpeed = 43;
 
-  function typeQuote(): void {
+  function typeQuote() {
     const quoteText = getRandomQuote();
-    function type(): void {
+    function type() {
       if (quoteElement) {
         if (index < quoteText.length) {
           quoteElement.innerHTML += quoteText.charAt(index);
