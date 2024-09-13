@@ -1,3 +1,19 @@
+:root {
+  --primary-color: #f9e2af;
+  --secondary-color: #1f0e06;
+  --tertiary-color: #241007;
+  --highlight-color: #ff6f91;
+  --highlight-alt: #ffcc5c;
+}
+
+.highlight {
+  color: var(--highlight-color);
+}
+
+.highlight-alt {
+  color: var(--highlight-alt);
+}
+
 .icon {
   text-shadow: 0 0 5px rgba(var(--color), 0.5), 0 0 10px rgba(var(--color), 0.4),
     0 0 15px rgba(var(--color), 0.3);
