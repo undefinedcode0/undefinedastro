@@ -14,3 +14,4 @@
 - Open a Terminal of your choice.
 - cd into the root directory of _**"/undefinedastro"**_
 - Run `npm run build` to build the source code, or run `npm run dev` for a dev enviroment.
+ #### (assuming you already have the astro, svelte, and sass packages installed)
