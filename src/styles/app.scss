@@ -1,0 +1,214 @@
+@import 'colors'; // Import color variables
+
+body {
+  font-family: 'DM Mono', monospace;
+  font-size: 16px; // Base font size
+  color: var(--primary-color); // Text color
+  background-color: #130804; // Background color
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    font-size: 14px; // Smaller font size for mobile
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 18px; // Larger font size for desktops
+  }
+}
+
+/* TUI Navigation */
+.tui-nav {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid var(--primary-color);
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'DM Mono', monospace;
+  color: var(--primary-color);
+
+  .tui-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .tui-nav-item {
+      margin: 0 0.75rem;
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s;
+
+        &:hover {
+          border-bottom: 2px solid var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+/* TUI Main Content */
+.tui-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  font-family: 'DM Mono', monospace;
+  color: var(--primary-color);
+  background-color: #1d0d06;
+  width: 100%;
+}
+
+/* TUI Footer */
+.tui-footer {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  border-top: 1px solid var(--primary-color);
+}
+
+/* TUI Heart Animation */
+.tui-heart {
+  color: var(--primary-color);
+  animation: blink 1.5s infinite alternate;
+
+  @keyframes blink {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color); // Matches body background
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .loading-text {
+    font-size: 16px;
+    color: var(--primary-color); // Text color
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 20px; // Slightly smaller for mobile
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 26px; // Larger for larger screens
+    }
+  }
+}
+
+/* Glow Effect */
+.glow {
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color, 0.8);
+  animation: glow 1.5s infinite alternate;
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px var(--primary-color, 0.8);
+    }
+    to {
+      text-shadow: 0 0 15px var(--primary-color, 1.0);
+    }
+  }
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li:before {
+    content: "><";
+    margin-right: 7px;
+    font-size: 17px;
+    font-weight: 700;
+  }
+}
+
+/* Content Cell */
+.content-cell {
+  background-color: var(--tertiary-color);
+  padding: 1rem;
+  width: 100%;
+  max-width: 600px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 2px solid hsl(0 15% 13%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); // Darker shadow for clear box separation
+  font-size: 16px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    font-size: 14px; // Smaller content text for mobile
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 18px; // Larger content text for desktops
+  }
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 600;
+  gap: 0.5rem;
+
+  i {
+    background-color: var(--tertiary-color); // Icon background color
+    color: var(--primary-color); // Icon text color
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 0.25rem;
+    font-size: 16px;
+  }
+}
+
+/* Outer Cell */
+.outer-cell {
+  background-color: var(--tertiary-color);
+  border-radius: 1rem;
+  border: 2px solid hsl(0, 15%, 13%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Horizontal Rule */
+hr {
+  border: 0;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--primary-color);
+}
