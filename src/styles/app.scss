@@ -1,4 +1,4 @@
-@import 'colors'; // Import color variables
+@import 'colors';
 
 body {
   font-family: 'DM Mono', monospace;
@@ -33,8 +33,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  font-family: 'DM Mono', monospace;
-  color: var(--primary-color);
 
   .tui-nav-list {
     display: flex;
@@ -66,8 +64,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  font-family: 'DM Mono', monospace;
-  color: var(--primary-color);
   background-color: #1d0d06;
   width: 100%;
 }
@@ -110,15 +106,15 @@ body {
 
   .loading-text {
     font-size: 16px;
-    color: var(--primary-color); // Text color
+    color: var(--primary-color);
     text-align: center;
 
     @media (max-width: 768px) {
-      font-size: 20px; // Slightly smaller for mobile
+      font-size: 20px;
     }
 
     @media (min-width: 1200px) {
-      font-size: 26px; // Larger for larger screens
+      font-size: 26px;
     }
   }
 }
@@ -168,11 +164,11 @@ body {
   box-sizing: border-box;
 
   @media (max-width: 768px) {
-    font-size: 14px; // Smaller content text for mobile
+    font-size: 14px;
   }
 
   @media (min-width: 1200px) {
-    font-size: 18px; // Larger content text for desktops
+    font-size: 18px;
   }
 }
 
@@ -185,22 +181,12 @@ body {
   gap: 0.5rem;
 
   i {
-    background-color: var(--tertiary-color); // Icon background color
-    color: var(--primary-color); // Icon text color
+    background-color: var(--tertiary-color);
     padding: 0.5rem;
     border-radius: 4px;
     margin: 0.25rem;
     font-size: 16px;
   }
-}
-
-/* Outer Cell */
-.outer-cell {
-  background-color: var(--tertiary-color);
-  border-radius: 1rem;
-  border: 2px solid hsl(0, 15%, 13%);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 /* Horizontal Rule */
