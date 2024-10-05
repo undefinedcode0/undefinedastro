@@ -81,9 +81,9 @@ body {
 /* TUI Heart Animation */
 .tui-heart {
   color: var(--primary-color);
-  animation: blink 1.5s infinite alternate;
+  animation: glow 1.5s infinite alternate;
 
-  @keyframes blink {
+  @keyframes glow {
     from {
       opacity: 1;
     }

@@ -4,7 +4,7 @@
   --tertiary-color: #241007;
 
   --cat-latte: #e1e2e7;
-  --cat-mocha: #1e1e28;
+  --cat-mocha: #1e1e2e;
   --cat-lavender: #b4befe;
   --cat-mauve: #cba6f7;
   --cat-red: #f38ba8;
@@ -13,4 +13,49 @@
   --cat-yellow: #f9e2af;
   --cat-teal: #94e2d5;
   --cat-sapphire: #74c7ec;
+  --cat-orange: #fab387;
+}
+
+.cat-latte {
+  color: var(--cat-latte);
+}
+
+.cat-mocha {
+  color: var(--cat-mocha)
+}
+
+.cat-lavender {
+  color: var(--cat-lavender);
+}
+
+.cat-mauve {
+  color: var(--cat-mauve);
+}
+
+.cat-red {
+  color: var(--cat-red);
+}
+
+.cat-blue {
+  color: var(--cat-blue)
+}
+
+.cat-green {
+  color:var(--cat-green);
+}
+
+.cat-yellow {
+  color: var(--cat-yellow);
+}
+
+.cat-teal {
+  color: var(--cat-teal);
+}
+
+.cat-sapphire {
+  color: var(--cat-sapphire);
+}
+
+.cat-orange {
+  color: var(--cat-orange);
 }
