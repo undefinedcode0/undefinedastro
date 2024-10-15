@@ -34,11 +34,21 @@ body {
   top: 0;
   z-index: 1000;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .tui-nav-list {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .tui-nav-item {
       margin: 0 0.75rem;
@@ -66,6 +76,10 @@ body {
   padding: 1rem;
   background-color: #1d0d06;
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
 }
 
 /* TUI Footer */
@@ -76,6 +90,11 @@ body {
   padding: 10px;
   width: 100%;
   border-top: 1px solid var(--primary-color);
+
+  @media (max-width: 768px) {
+    padding: 5px;
+    font-size: 12px;
+  }
 }
 
 /* TUI Heart Animation */
@@ -154,11 +173,11 @@ body {
   background-color: var(--tertiary-color);
   padding: 1rem;
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   font-weight: 600;
   margin-bottom: 1rem;
   border-radius: 8px;
-  border: 2px solid hsl(0 15% 13%);
+  border: 2px solid var(--primary-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); // Darker shadow for clear box separation
   font-size: 16px;
   box-sizing: border-box;
@@ -183,9 +202,13 @@ body {
   i {
     background-color: var(--tertiary-color);
     padding: 0.5rem;
-    border-radius: 4px;
+    border-radius: 8px;
     margin: 0.25rem;
     font-size: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 }
 
