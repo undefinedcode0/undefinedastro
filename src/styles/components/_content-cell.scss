@@ -1,0 +1,32 @@
+.content-cell {
+  background-color: var(--tertiary-color);
+  color: var(--text-color);
+  padding: 1rem;
+  width: 100%;
+  max-width: 650px;
+  font-weight: 550px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  transition: border-color var(--transition-speed);
+  box-sizing: border-box;
+
+  @include respond-to(sm) {
+    font-size: 14px;
+  }
+  @include respond-to(lg) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    border-color: var(--cat-red);
+  }
+}
+
+.cell-header {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}

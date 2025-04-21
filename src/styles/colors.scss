@@ -1,7 +1,10 @@
 :root {
-  --primary-color: #f9e2af;
-  --secondary-color: #1f0e06;
-  --tertiary-color: #241007;
+  --primary-color: #b4befe; // Border color
+  --text-color: #cdd6f4; // Text color
+  --secondary-color: #11111b; // Background color
+  --tertiary-color: #181825; // Content cells, inner cells
+
+  /* Root variables for .SCSS files */
 
   --cat-latte: #e1e2e7;
   --cat-mocha: #1e1e2e;
@@ -15,6 +18,8 @@
   --cat-sapphire: #74c7ec;
   --cat-orange: #fab387;
 }
+
+/* Class declarations for use in HTML files. */
 
 .cat-latte {
   color: var(--cat-latte);

@@ -1,0 +1,18 @@
+/* Pulsing heart */
+.tui-heart {
+  color: var(--primary-color);
+  animation: heart-glow 1.5s infinite alternate;
+
+  @include reduced-motion {
+    animation: none;
+  }
+}
+
+@keyframes heart-glow {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}

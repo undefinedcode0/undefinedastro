@@ -1,0 +1,44 @@
+.tui-nav {
+  background: var(--secondary-color);
+  padding: 0.625rem;
+  border-bottom: 1px solid var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+
+  @include respond-to(sm) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.tui-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(sm) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.tui-nav__item {
+  margin: 0 0.75rem;
+
+  & > a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom var(--transition-speed);
+
+    &:hover,
+    &:focus {
+      border-bottom-color: var(--primary-color);
+    }
+  }
+}

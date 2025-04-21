@@ -1,0 +1,35 @@
+/* Text glow & custom list bullets */
+.glow {
+  color: var(--primary-color);
+  text-shadow:
+    0 0 5px var(--primary-color),
+    0 0 10px var(--primary-color);
+  animation: text-glow 1.5s infinite alternate;
+
+  @include reduced-motion {
+    animation: none;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li::before {
+    content: "><";
+    margin-right: 0.5rem;
+    font-size: 1.0625rem;
+    font-weight: 700;
+  }
+}
+
+@keyframes text-glow {
+  from {
+    text-shadow: 0 0 10px var(--primary-color);
+  }
+  to {
+    text-shadow: 0 0 15px var(--primary-color);
+  }
+}

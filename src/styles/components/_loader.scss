@@ -1,0 +1,24 @@
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .loading-text {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--primary-color);
+
+    @include respond-to(sm) {
+      font-size: 20px;
+    }
+    @include respond-to(lg) {
+      font-size: 26px;
+    }
+  }
+}

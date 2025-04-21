@@ -4,6 +4,12 @@ import Layout from "../layouts/Layout.astro";
 
 <!-- Nice to see you here, user. -->
 
+<!doctype html>
+<head>
+ <meta charset="UTF-8" />
+ <title>undefinedcode</title>
+</head>
+
 <!-- Loading Screen -->
 <div id="loading-screen">
   <div class="loading-text">
@@ -15,23 +21,24 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- Introduction Section -->
   <section class="content-cell">
-    <h1>
-   who am i?          
-    </h1>
+    <div class="cell-header">
+   who am i?
+    </div>
     <p>
-      My name is <span class="glow">undefinedcode</span>. Nice to meet you! 
-      I am a technology and programming enthusiast. 
+      My name is <span class="glow">undefinedcode</span>. Nice to meet you!
+      I am a technology and programming enthusiast.
       I am a relaxed and introverted individual who is active on Discord. You can find me at <span class="glow">@undefinedcode</span>.
     </p>
   </section>
 
   <!-- Friends Section -->
   <section id="friends" class="content-cell">
-    <h1>
-      friend
-    </h1>
+    <div class="cell-header">
+      friends
+    </div>
     <ul class="glow">
       <li title="best freakpal no lie. love you vro!!!!">alocalbrit. -- <i>☩[ alxcalbrxt. ]☩ (brit)</i></li>
+      <li title="cool ass friend. i love their personality!!">xx_nyxyx_xx -- <i>Nyx</i></li>
       <li title="mm... good mate :dreaming:">wtf.cynn -- <i>jothemf</i></li>
       <li title=":tongue:">pixiesstickss -- <i>jay</i></li>
       <li title=":tongue:">w0rm.t -- <i>sal</i></li>
@@ -41,12 +48,12 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- Servers Section -->
   <section id="servers" class="content-cell">
-    <h1>
-   servers            
-    </h1>
+    <div class="cell-header">
+   servers
+    </div>
     <ul class="glow">
       <li title="freak hangout, best server i've ever been (private server)">bullshit🤑🙏 - <i>"hail brit!"</i></li>
-      
+
       <a class="glow" href="https://discord.gg/jgXW9gatGf"><li title="dead community server. good luck reviving it.">H Gang Community</li>
       </a>
 
@@ -55,7 +62,7 @@ import Layout from "../layouts/Layout.astro";
       </a>
 
       <a class="glow" href="https://discord.gg/xfyuzf3AvC">
-        <li title="current developer as of 10-14-2024.">OpenXP</li>
+        <li title="current developer as of 04-20-2025.">OpenXP</li>
       </a>
 
     </ul>
@@ -63,11 +70,11 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- Skills Section -->
   <section id="skills" class="content-cell">
-    <h1>
-   skills             
-    </h1>
+    <div class="cell-header">
+   skills
+    </div>
     <div class="content-cell">
-      <h3>Languages</h3>
+      <div class="cell-header">languages</div>
       <div class="skills-container">
         <i title="this is the language i use when working with operating systems lower than windows 7" class="cat-blue">C</i>
         <i title="my main coding language. very fast and optimized if you keep your code simple" class="cat-sapphire">C++</i>
@@ -87,7 +94,8 @@ import Layout from "../layouts/Layout.astro";
       <hr />
       <h3>Tools</h3>
       <div class="skills-container">
-        <i title="My main IDE for text editing and web development." class="cat-green">Neovim</i>
+      <i title="My main IDE for text editing and web development." class="cat-blue">Zed</i>
+        <i title="My former IDE for text editing and web development." class="cat-green">Neovim</i>
         <i title="a replacement for the native command prompt in Windows." class="cat-green">Nushell</i>
         <i title="where I pubicly store all my public projects, including this website." class="cat-blue">GitHub</i>
         <i title="what i use for interacting with github via a command line interface. (pushing new updates for repos.)" class="cat-orange">Git</i>
@@ -97,24 +105,27 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- Organizations Section. -->
   <section id="organizations" class="content-cell">
-    <h1> 
-   organizations      
-    </h1>
+    <div class="cell-header">
+   organizations
+    </div>
     <ul class="glow">
       <li title="i work as a developer here for helping to generate new certificates for compiling the windows xp source code, helped by my UBToolset program.">OpenXP</li>
+    </ul>
+    <ul class="glow">
+      <li title="i work here as a lighting manager, co-map builder, ui manager to manage each lighting accordingly to every place that belongs to Phosphor Games.">Phosphor Games</li>
     </ul>
   </section>
 
  <section id="contacts" class="content-cell">
-  <h1>
+  <div class="cell-header">
     contacts
-  </h1>
+  </div>
 
   <p>
     If you're interested in contacting me. Here are some socials below:
   </p>
 
-  <ul class="glow"> 
+  <ul class="glow">
     <a class="glow" href="https://github.com/undefinedcode0">
       <li>GitHub</li>
       </a>

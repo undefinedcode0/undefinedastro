@@ -1,0 +1,19 @@
+// Mobile first media queries
+@mixin respond-to($break) {
+  @if $break == sm {
+    @media (min-width: $bp-sm) {
+      @content;
+    }
+  } @else if $break == lg {
+    @media (min-width: $bp-lg) {
+      @content;
+    }
+  }
+}
+
+// Honor reduced motion preference
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

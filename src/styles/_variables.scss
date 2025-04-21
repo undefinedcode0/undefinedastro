@@ -1,0 +1,11 @@
+@import "colors"; // your existing CSS vars
+
+// Breakpoints
+$bp-sm: 768px;
+$bp-lg: 1200px;
+
+// Transition & focus
+:root {
+  --transition-speed: 0.3s;
+  --focus-color: var(--primary-color);
+}

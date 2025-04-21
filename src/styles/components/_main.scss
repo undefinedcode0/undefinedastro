@@ -1,0 +1,13 @@
+/* Main Content */
+.tui-main {
+  padding: 1rem;
+  background: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @include respond-to(sm) {
+    padding: 0.5rem;
+  }
+}

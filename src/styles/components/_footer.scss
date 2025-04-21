@@ -1,0 +1,15 @@
+/* Footer */
+.tui-footer {
+  background: var(--tertiary-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  border-top: 1px solid var(--primary-color);
+  font-size: 18px;
+
+  @include respond-to(sm) {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
